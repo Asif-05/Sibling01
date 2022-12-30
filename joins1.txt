@@ -1,0 +1,28 @@
+create s1 and s2 tables.
+
+
+s1 data set should be {23,44,55,72,90}
+
+s2 data set should be {74,23,90,5,31}
+
+
+
+select *from s1 union select *from s2;
+
+select *from s1 union all select *from s2;
+
+
+
+
+
+self join
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+
+
+
+

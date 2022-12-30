@@ -1,0 +1,12 @@
+SELECT user FROM mysql. user;  
+
+create user 'sibling'@'localhost' identified by 'two';
+
+GRANT command is used for giving permission to access a table for a particular user
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON profile TO 'root'@'localhost';
+
+
+REVOKE command is used for taking back the permission from a table for a particular user
+
+revoke SELECT, INSERT, UPDATE, DELETE ON profile FROM 'root'@'localhost';

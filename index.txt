@@ -1,0 +1,27 @@
+Index:
+
+     it is used fasten up the search process
+
+
+     when we declare column as a primary key then naturally indexing will happen
+
+
+Logical operators(AND, OR, NOT) can be used with WHERE clause
+
+- it is used to list out the rows from a table based on some condition
+
+
+  AND   -  here both the conditions should be satisfied
+     
+
+
+  OR    - here it is enough to have atleast one condition to be satisfied
+
+
+
+  NOT   - it will list out rows if the condtion is not true 
+
+
+
+
+Create a student table wit columns name,class,english, maths, physics and impose logical operators(AND,OR,NOT)        

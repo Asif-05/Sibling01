@@ -1,0 +1,95 @@
+DTL 
+
+    - Data Transaction Language
+
+
+   COMMIT - it will permenantly save the table/transaction in database
+
+
+   syntax: commit;
+
+
+   ROLLBACK - it will undo all the commands that are typed before giving commit. We can rollback to a particular transaction.
+
+   
+   Transaction is a set of SQL statements, it can have multiple SAVEPOINT
+
+   
+   syntax: rollback;
+
+     Note: We can't rollback once we have given the commit command
+
+
+  SAVEPOINT - it will save the table or a transaction temporarily
+  
+
+   syntax: savepoint savepoint_name;
+
+   ex: savepoint s1;
+
+
+  How to use rollback with savepoint
+
+
+  syntax:  rollback to savepoint savepoint_name;
+
+  example: rollback to savepoint s1;
+
+
+
+
+
+   start transaction;
+   select *from profile;
+   insert into table values('mark','selenium');
+   rollback; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date  Datatype should be used within single quote.
+
+ Format is 'yyyy-mm-dd'
+
+
+
+   name character(20)
+
+    name='Sachin Tendulkar'
+   
+
+   name varchar(10)     
+
+
+   name='Asif'
+
+
+MySQL doesn't support boolean data type
+
+
+it will convert boolean value into TINYINT(Data type)   
+
+
+
+   
+
+
+
+
+
+    
+
+ 
+
+  
+

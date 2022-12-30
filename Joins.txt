@@ -1,0 +1,202 @@
+INNER JOIN    - Returns records that have matching values in both tables
+
+
+LEFT JOIN OR LEFT OUTER JOIN - Returns all records from the left table and the matched records from the right table
+
+
+RIGHT JOIN OR RIGHT OUTER JOIN - Returns all the records from right table and the matched records from the left table
+
+
+FULL JOIN OR CARTESIAN JOIN - Returns all records from both tables
+
+
+   Table A     Table B        Inner Join A and B
+
+   45           67               67
+   78           42               90
+   67           90
+   90           83 
+
+
+
+ Syntax:
+
+
+ select table1.column1,table1.column2,table2.column1 from table1 inner join table2 on table1.column1=table2.column1;
+
+ select table1.column1,table1.column2,table2.column1 from table1 left outer join table2 on table1.column1=table2.column1;
+
+ select table1.column1,table1.column2,table2.column1 from table1 right outer join table2 on table1.column1=table2.column1;
+
+ 
+
+  
+
+Table A - sites
+
+   site_id   site_name
+   
+   1000      google.com
+   2000      amazon.com
+   3000      opencart.com
+   4000      facebook.com
+
+
+Table B - pages
+   
+   page_id   site_id   page_title
+
+   1         1000      gmail
+   2         1000      dealoftheday
+   3         2000      cameras
+   4         3000      signup
+   5         5000      logout 
+
+
+INNER JOIN    - Returns records that have matching values in both tables
+
+    select *from sites inner join pages on sites.site_id=pages.site_id;
+
+
+    The above query will display all the rows with mathching values
+
+
+
+    select sites.site_name,pages.page_title from sites inner join pages on sites.site_id=pages.site_id;
+
+
+  
+
+LEFT JOIN OR LEFT OUTER JOIN
+
+
+    it will return all the rows from the left side table and rows of matching values from right side table
+
+
+    The values that are not matching from right side table will be marked as NULL.
+
+
+
+RIGHT JOIN OR RIGHT OUTER JOIN
+
+
+     it will retrun all the rows from the right side table and rows of matching values from left side table
+
+
+     The values that are not matching from left side table will be marked as NULL.  
+       
+
+    
+  
+
+ create a table emp_personal with following columns emp_id,name, gender, age
+
+
+ create a  table emp_prof with following columns emp_id, role, salary
+
+
+FULL JOIN
+
+
+SELECT sites.site_name,pages.page_title from sites left outer join pages on sites.site_id=pages.site_id UNION
+SELECT sites.site_name,pages.page_title from sites right outer join pages on sites.site_id=pages.site_id;
+
+
+
+Table 1 - 4 rows
+
+
+Table 2 - 4 rows
+
+
+
+
+cross join/cartesian will produce answer as 16.(4 rows * 4 rows)
+
+it comes under Many to many relationship
+
+Tb1 - 4
+
+Tb2 - 3
+
+
+cross join = 12
+
+Syntax: select *from table_name1 cross join table_name2; 
+
+Ex:
+select *from sites cross join pages;
+
+
+
+ALTER command is used for changing the structure of the table like add column, drop column and modify the column.
+
+UPDATE command is used for changing the value of a column from a table. SET keyword is used along with UPDATE command to change the value of a column.
+
+
+Self join
+
+
+  - it performs join opeartion on the same table
+
+
+  - it will check for the similar column values from the  same table
+
+   
+  - make use of alias name for the table   
+
+
+create table students(name varchar(10), department varchar(15),rollno integer(5));
+
+
+insert into students values('ramesh','cs',100);
+
+select a.name,b.rollno from students a, students b where a.name<>b.name;
+
+
+
+
+
+
+
+left        right
+
+a={1,2,3}   b={1,2,4}
+
+
+aub(full join/union) = {1,2,3,4}
+
+aub(full join/union all) ={1,1,2,2,3,4}
+
+anb(inner join) = {1,2}
+
+left outer join ={1,2,3,1,2}
+
+right outer join ={1,2,4,1,2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+   

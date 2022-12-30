@@ -1,0 +1,134 @@
+
+
+    MariaDB is the latest version of MySQL
+
+     - The database engine is much faster than MySQL DBEngine
+
+     - Naturally MariaDB has greater performance than MySQL
+
+
+Default username is root
+
+No need to enter password
+
+
+  To connect from the command prompt please enter this at prompt
+
+
+ c:\xammp\mysql\bin>mysql -u root -p 
+
+
+First create a database
+
+syntax: create database database_name;
+
+create a table
+
+Syntax: create table table_name(column_name1, column_name2);
+
+create table 
+
+Ex: create table emp(emp_name varchar(10), emp_id varchar(10), role varchar(10));
+
+
+Insert rows
+-----------
+
+syntax: insert into table_name values('varchar_value',int_value,);
+
+ex: insert into batch values('Testing',45000,'Chennai');
+
+
+To retrieve rows from table
+
+syn: select *from table_name;
+
+
+
+ex: select* from batch;    // it will list out all the records/rows from the table
+
+
+DDL 
+
+
+    - Data Definition Language
+
+
+    create, insert, update, delete
+
+
+
+   
+update 
+
+
+     - to update a value in a row
+
+     - make use of SET operator
+
+syntax: update table_name set coulmn_name='value' where column_name='value'; 
+
+
+Delete:
+
+    - to delete a particular row from the table
+
+    - make use of WHERE clause
+
+    - WHERE clause is used for locating a particular row
+
+Syn: delete from table_name where column_name='value';
+
+
+
+Truncate:
+
+    - to delete all the rows from the table
+
+    - structure will remain
+
+syn: truncate table_name;
+
+     truncate emp;   // all the rows will be deleted
+
+
+Drop :
+
+     - to remove the table from database
+    
+     - structure will also get removed
+
+syn: drop table table_name;
+
+
+
+DRL
+
+     - Data Retrieval Language
+
+
+    select *from table_name;
+
+
+    select column_name1,column_name2 from table_name;
+
+
+    select coulumn_name1 as alias_name from table_name;
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
