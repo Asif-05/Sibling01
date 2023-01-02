@@ -1,0 +1,40 @@
+Test Conditions for blazedemo
+
+
+   1. Check on launching the URL blazedemo.com using the page title
+
+   2. Check on clicking the link 'destination of the week the beach' the Blazedemo-vacation page title appear and the text Destination of the week Hawai ! should appear
+
+   3. On clicking the travel the world link the homepage should appear
+
+   4. On clicking the home link the login page should appear
+
+   5. On clicking the Register link the registeration form should appear
+
+   6. On filling up the register form and on clicking the submit buttton it should allow to login
+
+   7. Do validation on all the fields of registeration form
+
+   8. On clicking the drop down listbox the items should appear in alphabetical order
+
+   9. For departure field On selecting the option from drop down list box the option should appear
+
+   10. For destination field On selecting the option from drop down list box the option should appear data
+  
+   11.On clicking the find flights button the departure and destination names should appear
+      and the choose the flight buttons should appear
+
+   12. On clicking the choose the flights button departure and destination names should appear   
+       and the purchase details should be filled up mandatorily
+
+   13. All the fields should be validated
+
+   14. On clicking the purchase flights button it should generate the proper details of the travel
+       (like destination, departure)
+   
+
+ 
+   
+    
+
+     
