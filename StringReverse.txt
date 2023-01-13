@@ -1,0 +1,93 @@
+
+
+String in java is an object that has in built methods
+
+
+It is mentioned within double quotes
+
+
+we can store text, numner, special characters in a string variable
+
+
+
+
+
+public class Reverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="Welcome";
+		
+		char[]ch=s.toCharArray();
+		
+		
+        for (int i=ch.length - 1;i >= 0;i--)
+
+         // print reversed String
+
+        System.out.print(ch[i]);
+
+	}
+
+}
+
+
+
+
+public class Reverse1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s1="Automation";
+		
+		int len=s1.length();
+		
+		for(len=s1.length();len>0;--len)
+	    {
+	    	System.out.println(s1.charAt(len-1));
+	    }
+		
+	}
+
+
+
+public class Reverse2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s2="Welcome to Selenium";
+		
+		StringBuilder sb=new StringBuilder(s2);
+		
+		
+		
+		StringBuilder rev=sb.reverse();
+		
+		System.out.println(rev);
+		
+	}
+
+}
+
+
+
+
+public class Reverse3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 String s3="Good Morning all";
+		 
+		 StringBuffer sb1=new StringBuffer(s3);
+		 
+		 StringBuffer rev1=sb1.reverse();
+		
+		 System.out.println(rev1);
+		
+	}
+
+}

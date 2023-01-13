@@ -1,0 +1,59 @@
+Exception
+
+
+     - it is an error
+
+     - it disrupts the normal flow of execution
+
+     - java compiler will create an object whenever an exception is thrown   
+
+Types
+
+     - Checked 
+
+           - it happens at the compile time 
+
+           - it should be handled using try catch block  
+  
+
+     - Unchecked 
+     
+           - it happens at the run time 
+
+           - No need to handle unchecked exceptions
+
+
+For example:
+
+      10 lines of code
+
+
+      error happens at 6th line 
+
+
+      remaining 4 lines will not be executed
+
+
+
+  try-catch mechanism will help in executing the remaining lines of code
+
+  it will handle the interruption(exception/error) and allow the normal flow of execution
+
+
+   ArthimeticException
+
+   NullPointerException
+
+   ArrayIndexOutOfBounds
+
+   FileNotFound
+ 
+    
+
+
+
+
+
+
+
+

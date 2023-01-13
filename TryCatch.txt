@@ -1,0 +1,39 @@
+ArrayIndexOutOfBoundsException
+
+try
+		{
+			
+		int[] marks={89,67,92};
+		System.out.println("The mark is:"+marks[3]);
+		
+		}
+		
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Please mention index position lesser than or equal to 2");
+		    System.out.println("The exception is:"+e.getMessage());
+		   
+		
+		}
+		finally
+		{
+			 System.out.println("Execption handled Successfully");
+		}
+
+
+
+
+NumberFormatException
+
+try
+		{
+		String s="123.45";
+		int i=Integer.parseInt(s);
+		}
+		
+		catch(NumberFormatException e)
+		{
+			System.out.println("It is a wrong number format:"+e.getMessage());
+		}
+
+

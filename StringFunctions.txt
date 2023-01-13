@@ -1,0 +1,98 @@
+String functions
+
+
+select ascii('a');
+
+select ascii('3');
+
+
+select char_length('');
+select char_length('Good morning');
+select char_length(' ');
+select character_length('');
+
+
+Concantenation
+
+- it combines tow different string values
+
+
+select concat('Good','Morning');
+
+select concat('Good',NULL);
+
+insert(string,position,number,substring);
+
+select insert('net',1,5,'Inter');
+
+
+instr(string, substring);
+
+select instr('Good','G');
+
+select lcase('WELCOME');
+
+select left('Welcome',3);
+
+select length('Welcome');
+
+select replace ('Mad','d','x');
+
+
+
+Trim command is used for removing the extra spaces from the given string
+
+
+select ltrim('   Good morning');
+
+
+Removes extra spaces from the left hand side of string
+
+select rtrim('Good morning   ');
+
+Removes extra spaces from the right hand side of string
+
+
+select strcmp('great','great');
+
+same string gives result as 0
+
+different strings gives result as 1
+  
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

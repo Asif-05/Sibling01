@@ -1,0 +1,72 @@
+
+
+    Exceptional handling
+
+
+   - Checked Exceptions
+  
+   - Unchecked Exceptions
+
+
+
+  Exception is an error or unexpected situation
+
+  
+  Checked Exceptions should be handled with the help of try catch block
+
+  Happens at the Compile time and it is also known as Compile Time exceptions
+
+
+  Unchecked Exceptions are called as run time exceptions.
+
+  These are related arithmetical errors
+
+  Ex: anything divided by zero
+
+
+Exceptions related to Selenum Webdriver
+
+1. Driver Exceptions- Trying to launch the chrome browser by setting the property for firefox browser.
+
+2. NoSuchElementException - Tying to locate an element which is not in the DOM.
+
+3. NoSuchWindowException
+
+4. NoSuchFrameException
+
+5. NoAlertPresentException
+
+6. ElementNotVisibleException
+
+7. PageTimeOutException 
+
+
+try - it will have the code which creates the exception
+
+catch -it will have the code to handle(solve) the exception
+
+throw - it will show the exception again no matter whether we have handled it or not
+
+throws- it will appear when we use any delay(Thread) in the test script.
+
+finally - it will execute the code by default  no matter whether we have handled the exception or not
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

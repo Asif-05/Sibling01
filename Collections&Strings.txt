@@ -1,0 +1,195 @@
+Collection
+----------
+
+         - it is a framework that has different interfaces to store and manipulate the data
+
+         - we can implement the classes and methods from the interfaces
+
+         - it is a resizable array and we can manipulate(add, remove..) the data items 
+
+
+
+Set
+---
+
+     - it is a java built in interface
+
+     - it can store only unique data
+
+     - it will not store duplicate data
+
+
+
+List
+----
+
+     - it is a java built interface that come under collection framework
+
+     - it can store duplicate(repetative) data
+
+     - ArrayList is the Class that implements the List interface
+
+Collection
+----------
+
+public class Collection1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set<Integer> marks=new HashSet<Integer>(); // HashSet is the class that implements the Set interface
+		
+		marks.add(95);
+		marks.add(77);
+		marks.add(86);
+		marks.remove(77);
+		marks.add(95);
+		marks.add(95);
+		boolean res=marks.contains(95);
+		
+		System.out.println("The total number of marks is:"+marks.size());
+		System.out.println("The value is present in the collection:"+res);
+		
+		for(int i:marks)
+		{
+			System.out.println("The marks is:"+i);
+		}
+		
+		}
+
+}
+
+
+
+public class Collection2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<String> tech=new ArrayList<String>();
+		
+		tech.add("Java");
+		tech.add("Python");
+		tech.add("SQL");
+		tech.add("Java");
+	//	tech.remove(1);
+		
+		System.out.println("The Number of Technologies:"+tech.size());
+		
+		for(String s:tech)
+		{
+			System.out.println("The length of data item is:"+s.length());
+		}
+		
+		
+		
+		
+
+	}
+
+}
+
+
+public class Collection3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<String, Integer> tech=new HashMap<String, Integer>();
+		
+		tech.put("Java", 8);
+		tech.put("Oracle", 12);
+		tech.put("Selenium", 4);
+		tech.put("Jmeter",3);
+		tech.put("Selenium", 3);
+		
+		tech.replace("Oracle", 12, 10);
+		boolean res=tech.containsKey("SQL");
+		System.out.println("Selenium key is present in the Map:"+res);
+		
+		for(String s:tech.keySet())
+		{
+		System.out.println("The Key is:"+s);	
+		}
+		System.out.println();  // it will 
+		for(int i:tech.values())
+		{
+			System.out.println("The value is:"+i);
+		}
+				
+	}
+
+}
+
+
+public class StringManipulation {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s1="Automation";
+		String s2=new String("Testing");
+		String s3=" DataBase Testing";
+		int s3_len=s3.length();
+		int s3_len1=s3.trim().length();// trim method removes extra spaces at the beginning and end of a string 
+		String rep=s3.replace("DataBase", "Backend");
+		String low=s2.toLowerCase();
+		String up=s2.toUpperCase();
+		boolean comp=s1.equalsIgnoreCase(s2);
+		
+		String domain=s1+s2; // Concatenation
+		
+		System.out.println("The Area of interest is: "+domain);
+		System.out.println("The length before trim is:"+s3_len);
+		System.out.println("The replaced String is:"+rep);
+		System.out.println("The length after trim is:"+s3_len1);
+		System.out.println("The lower case string is:"+low);
+		System.out.println("The upper case string is:"+up);
+		System.out.println("Comparing String is:"+comp);
+		
+
+	}
+
+}
+
+
+string:
+-------
+ public class Reverse3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 String s3="Good Morning all";
+		 
+		 StringBuffer sb1=new StringBuffer(s3);
+		 
+		 StringBuffer rev1=sb1.reverse();
+		
+		 System.out.println(rev1);
+		
+	}
+
+}
+
+
+
+public class Reverse1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s1="Automation";
+		
+		int len=s1.length();
+		
+		for(len=s1.length();len>0;--len)
+	    {
+	    	System.out.println(s1.charAt(len-1));
+	    }
+		
+	}
+}
+
+
+
