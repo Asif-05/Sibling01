@@ -1,0 +1,70 @@
+
+
+     step1 : sign up form https://github.com/
+
+     step 2: click new button(to your left) and create a new repository 
+
+     step 3: give a name for the repository
+
+     step 4: select public
+
+     step 5: select add README file
+   
+     step 6: click Create Repository
+
+     step 7: Go to settings to your right corner and select setting tab in the end
+
+     step 8: click Developer Settings
+
+     step 9: click personal access token
+ 
+     step 10: click Generate New Token
+
+     step 11: write some description and select repo 
+   
+     step 12: click Generate Token
+
+     step 13: Copy the token and use as password while pushing from eclipse
+
+     step 14: right click on the eclipse project and go to Team-->share project
+
+     step 15: select Use or create repository in parent folder of project
+
+     step 16: click the  project name
+
+     step 17: click Create Repository button
+    
+     step 18: click finish button
+
+     step 19: right click on the eclipse project and go to Team-->commit
+
+     step 20: In the git staging tab select needed files and add it to the index by dragging and                   dropping or by clciking the + symbol 
+     
+     step 21: Enter commit message 
+    
+     step 22: Click commit
+
+     step 23: Click Push head
+
+     step 24 : Paste the URL of the repository from github ( In github click code button in your                repository and copy the URL)
+
+     step 25: enter your github username 
+  
+     step 26: In password field just paste the token key which is copied from github
+
+     step 27: click preview 
+
+     step 28: enter your github username 
+     
+     step 29: paste the token key which is copied from github
+ 
+     step 30: click push button 
+
+     
+
+
+
+ 
+     
+    
+
