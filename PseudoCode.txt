@@ -1,0 +1,74 @@
+IF condition statement THEN
+    if body
+ELSE IF condition THEN
+    else if statement
+ELSE
+    else body
+ENDIF
+
+Example 1:
+---------
+
+age = INPUT : “Enter your age”
+IF age is greater than 18
+    PRINT “adult”
+ELSE
+    PRINT “Under age”
+
+
+FOR initial_value TO end_value
+    for body
+ENDFOR
+
+FOR i -> 0 to 20
+    PRINT i
+ENDFOR
+
+Example for Rectangle
+
+BEGIN
+    length = INPUT: "Enter the length of the rectangle"
+    width  = INPUT: "Enter the width of the rectangle"
+
+    area = length * width
+
+    OUTPUT area
+END
+
+
+WHILE condition
+    while body
+
+ENDWHILE
+
+
+i : 0
+WHILE i  <= 20
+    PRINT i
+ENDWHILE
+
+
+FUNTION function_name(parameters)
+    function body
+    RETURN value
+
+ENDFUNCTION
+Example:
+
+FUNTION add( para1, para2 )
+    result: para1+para2
+    RETURN result
+ENDFUNCTION add
+
+
+
+Increases the code readability.
+Provides the best way to write algorithms.
+More than specific syntax focuses on the program logic.
+The best approach to represent how the actual program will be written.
+
+
+Use capital words for reserved commands or keywords, for example, if you are writing IF…ELSE statements then make sure IF and ELSE be in capital letters.
+Write only one statement per line.
+Use indentation for the block body. It keeps the body of every component isolated and indenting different pieces of each block will indicate that those pieces of pseudocode go under a less intended section.
+Be specific while writing a statement, use plain English to provide a particular description.

@@ -1,0 +1,163 @@
+   Design Paradigm
+
+        - Internal architecture
+
+        - Modules and its dependency
+
+        - The flow of the data between modules
+
+        - LLD (Low Level Design)- pesudo code, algorithms
+
+        - HLD (High Level Design) - UML(Unified Modelling Language) Diagrams like DFD(Data Flow Diagram),Class Diagrams,
+                                    Use Cases,ER(Entity Relationship Diagrams)
+
+
+      
+
+
+     Class   -  Car
+
+
+     Objects -  BMW, Toyota, KIA, TATA, 
+
+
+     Attributes - Color, Model, price
+
+
+     Method - Drive() Turn() 
+
+   Coding Paradigm
+  
+           - Here the developer write programs based on pseudo code and algorithms
+
+
+           - Programs will be developed based on a particular programming language
+
+           - Developer writes the code for seperate modules
+
+           - Coding is done based on the standards for the corresponding language
+
+           - Standards bring lot of clarity and easy understanding
+             
+           - Prototype(Model of the proposed system) is designed by the developer  
+
+           - Unit testing is done by the developer while writing the code
+
+
+
+          
+     60% to 70% of expenses goes for implemantation and maintenance of the software
+
+
+
+Why SE ?
+
+
+
+    large system - we develop softwares for complex business models
+
+
+    Scalability - how far we can upgrade or resize it's capability
+
+
+    Cost - we can control unwanted expenses(budget), wastage of time and resources(man power)
+
+  
+    Dynamic Nature- frequent changes has to be met
+
+
+
+Good Software
+
+
+   Budget - it should be cost effective
+
+   Usability - it should be more user friendly(easy navigation)
+
+   efficiency - good performance(takes less time duration to excute a command)
+
+   correctness- it should serve for the expected purpose
+
+   Security - safe from intruders,setting passwords, user authentication, firewalls
+
+   Functionality- logical flow i.e., the software should work as per the commands given by end user
+
+   Dependanility - trustworthiness, software should earn the confidence of end user
+
+   Safety - should be safe from catastrophe(natural disasters), by taking proper back up we can safeguard
+
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
