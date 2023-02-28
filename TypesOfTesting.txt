@@ -1,0 +1,275 @@
+Levels of Testing
+          
+
+     - Unit Level
+           
+            - Done by the developers at every module
+    
+            - Junit, Nunit, TestNG
+
+
+     - Integration Level 
+
+            - Done by developers/ testers
+
+            - Combining modules and testing it together
+
+            - Two sub levels
+                     
+                - component level integration --->  check for the interface/ connectivity(JDBC/ODBC)
+ 
+                - system level integration ---> check whether data is passed properly from one to                                                                                      another  module(flow)
+
+                                 
+
+     - System Level
+
+                - Functional and Non-functional testing is done
+
+
+                - Functional  ---> it checks the logical flow of the software
+                                   
+                                   check whether the software works as per the instruction or not
+
+                                   Ex: the corresponding page should appear on clicking the link
+
+                                       amazon.in  --> opens homepage of amazon
+
+                - Non-Functional ----> it checks how much time it took to execute an instruction
+                (Performance & Security)                        
+                                        Ex:time taken to launch the homepage of website amazon.in  
+
+                                        how much secure is the software(passwords, authentication, firewalls) 
+
+   
+     - Acceptance Level
+
+                   - UAT
+                         --> User Acceptance Testing
+
+                             Done by the client (BFSI-Banking Financial Services and Insurance)  
+                             Ex: A Banker will do UAT 
+
+                             Client test the software andd shares feedback
+                             
+                             Developemnt & Testing team will work on the feedback
+
+
+                   - OAT/FAT
+                        
+                         ---> Operational Acceptance Testing / Field Acceptance Testing  
+
+                              Done by the end-user
+
+                              It is done after depolying the softare in client location(Production Environment)
+                            
+                              Ex: for a banking software ATM point   
+                                 
+                       
+
+        Infosys  -- IT solution Provider
+
+
+        Canara Bank -- Client 
+
+
+        Customers of Bank -- end users  
+
+
+      
+ A seperate Test Plan and a Test Strategy is maintained 
+
+
+  Unit Test Plan
+
+  Integration Test Plan
+
+  Security Test Plan
+
+  Acceptance Test plan
+
+
+ Types of Testing
+      Acceptance - Done by client and end-user
+
+      Adhoc - Done with not clear (partial)requirements      
+
+      Alpha - Done by client at developers location   
+
+      Behavioural - Black box testing(logical flow is tested by testers)
+
+      Beta - Done by end user at trial period 
+
+      Compatibility - Test the sofware in different environment(h/w,s/w, o/s, browser)
+
+      comparison - Test the strength and weakness of the software with its previous version
+
+      Depth - Detailed Test on the software 
+
+      End-to-end - Test the software in a environment that resmbles the real environment(Simulation process)
+
+                    Ex: Jmeter, Loadrunner
+
+      functional Testing - Logical Flow of the software 
+
+      Gorilla Testing - Heavy testing is done on a particular feature
+
+      Incremental integration - Integrate parallely and no need to wait 
+
+      Monkey - Testing is done randomly 
+
+      Load - Test the softare under its limit(by gradually increasing the load)
+
+      Regression - Test after the fixes or enhancements or modification in the software. Check for side effects
+
+      Re-Testing - Here test the software after fixes(Debugging). side effects are not tested.
+
+      Sanity - Primary level testing(here test the basic functionality)
+               if the software fails for basic usage then sanity test fails
+      Smoke  - After changes or modifications in the software. smoke testing is done.
+
+               Sub set of regression testing
+
+      Stress - Testing the software beyond its limit
+                
+               Overloading the software to know the breakpoint. 
+
+      Usability - Test the user friendliness(GUI Standards) of the software 
+
+
+      Volume - Test the software with large amount of data 
+
+      white box - here testing is done on the code.
+
+                  also called as Structural testing
+      
+
+    
+    Traceability matrix - it maps the requirement to corresponding test case
+
+
+    Entry Criteria - it is the pre-requisites
+
+    Exit Criteria  - make sure all requirement are met
+
+
+
+
+
+
+
+
+
+      
+Bug - Raised by QA team
+
+    - before software is released
+
+    - Deviation from Expected result
+
+
+Defect - Raised by the Client
+
+       - after software is released
+
+       - Deviation from Expected result
+
+
+Failures - it is visible to the end user
+
+         - if it fails to meet the end user need
+
+Quality
+
+        - both technical and financial requirements 
+
+        - Delivering a product on time that meets end user requirement
+
+Quality Assurance
+
+         - It is the process of defect avoidance     
+
+         - Plan, Monitor and Control
+
+         - makes sure that testing is done as per the plan
+
+         - meet deadlines, set standards
+
+Quality control
+   
+         - it is the process of defect detection
+
+         - here defects will be identified and reported to development team to fix
+
+
+Verfication and Validation
+
+       Verifying - whether the software works or not
+
+
+       Validation -- whether the software works as per the client requirements 
+
+
+                  -- check length and data type 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+             
+ 
+     
+
+             
+
+     
+
+
+
+
+
+
+   
+
+      
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+                  
+   
+     
+           
+
+
+
+
+
+
+
+
