@@ -1,0 +1,180 @@
+Testing Methodology
+-------------------
+
+   - Manual Testing
+    
+       - Here testing is done by the without help of any automation tools
+
+       - Manual Test Cases, Bug reports are prepared 
+
+       - Documentation skills are needed
+
+       - It is done on mandatory basis
+       
+
+Advantage 
+ 
+       - It is easy to follow and implement
+
+       - Flexible to test
+
+ 
+Disadvantges 
+
+      - Domain knowledge is mandatory
+
+      - Time consuming process
+
+      - less efficient(prone to human errors-typo errors)
+
+
+   - Automation Testing
+
+       - it is done with the help of automation testing tools
+
+      
+    When to automate?
+
+      - it is done when the requirements are not stable
+
+      - when the process involves lots of repetation
+
+    
+    where to automate?
+
+  
+       - When we test huge and complex data
+
+       - less time constraint
+
+
+  Advantage
+  
+        - takes less time duration to complete the testing phase
+     
+      
+        - highly effiecint(can avoid human liable errors)
+
+    
+        - can handle dynamic data efficiently
+
+
+  Disadvantage
+
+
+        - Need programming skills(Core Java, C#, Java Script, Python)
+
+
+        - Tools are expensive to deploy and maintain
+
+
+        - Should do a lot of CBA(Cost Benefit Analysis)
+
+      
+   Category of automation tools
+
+             - Vendor based tool(licensed)
+
+                    - Tools that are marketed by a company(HP, IBM) 
+           
+             - Open source(Free)
+
+                      - Download it for free (Selenium, Jmeter)
+            
+             - Customized
+
+                      - which is customized(edited based on needs) and  by the company itself 
+
+                      - Internal tools
+
+ Types of Tools
+
+
+     Functional  - logical flow(HP UFT/QTP,Selenium, IBM's RFT)
+
+
+     Non Functional - performance(HP's Loadrunner, Jmeter) and security
+
+
+     Bug tracking   - Bugzilla( Can only write bug reports and test cases are not allowed)
+
+
+     Test Management  - Here we can design both bug reports and test cases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+       
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
