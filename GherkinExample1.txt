@@ -1,0 +1,55 @@
+As an Admin 
+
+Example: 
+  
+   I would like to change the password of other user's accounts.
+         
+   Feature: Update password
+   
+   Scenario: Admin can update the user password
+   
+   Given : I am in the HR system with an Admin account
+   
+   When  : I update password of another user
+   
+   Then  : I receive a message from system saying "password updated successfully"
+   
+   And   : user's password is updated to the new password
+
+
+Gherkin Keywords:
+-----------------
+
+Feature     - it is the extension of gherkin file. It briefs about the Test.
+
+Scenario    - Test that we have to perform
+
+Given       - Pre Condition / Pre requisites
+
+              For example: for testing a login screen we need username / password 
+
+When        - User interaction in the system
+
+Then        - The Output that we recieve from the system
+
+And         - Adding more conditions and it can be used with keywords like given, when and then
+
+Background  - Common steps repeated 
+
+But         - Negative case
+
+
+ATM
+---
+
+Background : Common steps used for all transactions
+ 
+  ATM Debit Card should be validated (user credentials)
+
+    - check balance
+
+    - withdraw
+ 
+    - Deposit
+
+    - mini statement
