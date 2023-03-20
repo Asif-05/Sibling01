@@ -1,0 +1,227 @@
+TDD & BDD
+
+
+    - Test Driven Development
+
+
+    - it is a development approach
+
+
+    - Developemnt will happen based on test cases
+
+    
+    - test cases are written in advance
+
+
+    - code should pass all the test cases
+
+
+     TDD cycle
+
+         - Write the test
+
+         - Make it run
+ 
+         - Change the code to make it right i.e., refactor
+
+         - Repeat the process
+
+     
+
+
+
+BDD
+
+    - Behavioural Driven Developement
+
+
+    - it is a development approach
+
+
+    - here we create scenarios which is understandable for all the stakeholders(dev, testers, analyst)
+
+
+    - it is like a common english language
+
+
+
+Gherkin Keywords
+
+
+     Feature - it refers to business Requirement
+
+     Scenario - Validation to be performed
+
+     Given - Pre condition
+
+     When - it refers the interaction between user and the system
+
+     Then - Expected result(what the system is suppose to do?)
+    
+
+     
+    
+    Login screen
+
+
+    Feature   - To test the login screen
+
+    Scenario  - test with valid and invalid user credentials(username and password)
+
+    Given     - The login page should be launched
+
+    When      - users enters valid username and password
+
+                user enters valid username and invalid password
+
+                user enters invalid username and valid password
+
+                user enters invalid username and invalid password 
+
+    And      -  user clicks the Submit/OK button
+    
+    Then     -  what should be the systems response (expected result) 
+
+    And      - it is like a extension used with when,Then keyword                
+                  
+             For example:
+
+                    when : users enters valid username and password
+
+                    And  : user clicks the submit / ok button
+
+
+                    Then : system should accept the input and allow to login
+
+          
+                    And  : system should display the inbox / dashboard
+
+
+
+Cucumber 
+
+
+    - it is a BDD framework that is implemented using Gherkins
+
+    
+    - For an example webdriver script related to launching a browser 
+
+    - with the  help annotations we can describe the scenario
+
+
+
+Feature  - refers to the business requirement
+
+Scenario - Functionality
+
+Given    - refers to the test condition
+
+When     - refers to the test descriptions
+
+Then     - refers to the expected result
+
+
+
+ 3 Ways to install cucumber eclipse plugins
+
+
+     i.   Eclipse MarketPlace
+
+     ii.  Install New Software
+
+     iii. Maven Dependency(easiest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+features
+         - it defines the business requirement
+
+step definition
+
+         - it defines the selenium webdriver code implementation using java
+
+runner class
+
+        - it refers to TestNG program where we execute the script
+
+
+
+How to install?
+
+
+    - Download plug-in from Eclipse marketplace
+
+    - Download jar files 
+
+    - Download maven dependency 
+
+
+TestNG is mandatory for Cucumber
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
