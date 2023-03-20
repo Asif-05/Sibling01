@@ -1,2 +1,2 @@
 # Sibling01
-Class notes on SQL Commands
+Class notes SQL, Java, Testing
