@@ -1,0 +1,893 @@
+Selenium is an open-source application that is used to automate web browsers across the platforms and caters to different testing requirements.
+In this article we will covers 100+ Selenium interview questions that leaves no scope of doubt once you give it a thorough read.
+
+Top 100+ Selenium Interview Questions and Answers
+Selenium is a suite of tools to automate web browsers across many platforms. It is a free, open-sourced application that caters to different testing requirements. It supports the authoring of tests without having to learn a scripting language and provides a domain-specific language to write tests in many popular programming languages. The tests written on Selenium can be run on most modern web browsers. Due to these advantages, Selenium has become popular in the automation testing domain. If you are preparing for a Selenium interview, here are the top frequently asked Selenium interview questions and answers to boost your interview preparation. 
+
+
+Top Selenium Interview Questions and Answers:
+Here are the most important Selenium interview questions for freshers and experienced candidates.
+
+Q1. How many languages does Selenium support?
+Ans. Selenium support various programming languages such as C#, Java, PHP, Ruby, Python, Perl, Javascript, etc.
+
+Explore popular courses on Naukri Learning: 
+
+Popular QA and Testing Courses	Top Software Testing Courses
+Popular Automation Testing Courses 	Top Software Tools Courses
+Q2. What is automation testing?
+Ans. Automation testing or Test Automation is a process of automating the manual process to test the application/system under test.
+
+Automated Testing Process:
+Follow the given steps  for automation testing:
+
+Test Tool Selection
+Define Scope of Automation
+Planning, Design and Development
+Test Execution
+Maintenance
+Automated Testing Process:
+Q3. What are the different ways to find an element?
+Ans. Following are the different ways to find an element:
+
+ID
+Name
+Tag
+Attribute
+CSS
+Linktext
+PartialLink Text
+X-path
+Must Check: Free Selenium Course and Certificates
+
+Q4. What are the testing types supported by Selenium?
+Ans. Following are the testing types supported by Selenium:
+
+Functional Testing
+Regression Testing
+Sanity Testing
+Smoke Testing
+Responsive Testing
+Cross Browser Testing
+UI testing (black box)
+Integration Testing
+Q5. What is the difference between implicit wait and explicit wait in selenium WebDriver?
+Ans. When an implicit wait is implemented in tests, if WebDriver cannot find an element in the Document Object Model (DOM), it will wait for a defined amount of time for the element to appear in the DOM.
+
+An explicit wait can be used where synchronization is needed, for example, the page is loaded but we are still waiting for a call to complete and an element to appear.
+
+Q6. Which is better – implicit wait or explicit wait?
+Ans. Explicit waits are better than implicit wait. Unlike an implicit wait, you can write custom code or conditions for wait before proceeding further in the code.
+
+Q7. When should I use Selenium IDE?
+Ans. Selenium IDE is the simplest of all the tools in the package and should be a great tool for naïve users as it is easy to learn with minimal acquaintances in the programming language.
+
+Q8. Explain the difference between single (/) and a double slash (//) in X-path?
+Ans. Single slash (/) allows the creation of ‘absolute’ path expressions, while double slash (//) allows the creation of ‘relative’ path expressions.
+
+Q9. What is the use of XPath?
+Ans. XPath is used to find the WebElement in web pages. It is also useful in identifying the dynamic elements.
+
+Syntax:
+
+Xpath=//tagname[@attribute=’value’]
+
+//: To select current node
+Tagname: Tagname of the given node
+@: To select attribute
+Attribute: Attribute name of the node
+Value: Value of the attribute
+Q10. What is the difference between type keys and type commands?
+Ans. Type key populates the value attribute using JavaScript whereas type commands emulate actual user typing. 
+
+Check out the top Selenium Courses 
+
+Q11. What is the difference between verify and assert commands?
+Ans. Assert command allows us to check whether an element is on the page or not. Verify command checks whether the element is on the page, otherwise, the test will carry on executing.
+
+Q12. What are heightened privilege browsers?
+Ans. Heightened privileges browsers are similar to Proxy Injection, allowing websites to do something that is not commonly permitted.
+
+Q13. Explain what is Data-driven framework and Keyword driven?
+Ans. In a Data-driven framework, the test data is separated and kept outside the Test Scripts, while test case logic resides in Test Scripts.
+
+Keyword-driven frameworks require the development of data tables and keywords, independent of the test automation.
+
+Q14. What is Object Repository?
+Ans. Object repository is an essential entity in any UI automation that allows a tester to store all objects that will be used in the scripts in one or more centralized locations rather than scattered all over the test scripts.
+
+Q15. Mention 5 different exceptions you had in Selenium WebDriver?
+Ans. The 5 different exceptions in Selenium WebDriver are WebDriver Exception, NoAlertPresentException, NoSuchWindowException, NoSuchElementException, TimeoutException
+
+Q16. Which web driver implementation is the fastest?
+Ans. HTMLUnit Driver implementation is the fastest
+
+Q17. How to find more than one web element in the list?
+Ans. It can be done using WebElement List. E.g.
+
+List <WebElement> elementList = driver.findElements(By.xpath(“//div[@id=’example’]//ul//li”));
+ 
+
+int listSize = elementList.size();
+
+for (int i=0; i<listSize; i++)
+
+{
+
+serviceProviderLinks.get(i).click();
+
+driver.navigate().back();
+
+}
+
+Q18. What is the difference between driver.close() and driver.quit() command?
+Ans. Close() method closes the web browser window that the user is currently working on or the browser that WebDriver is currently accessing.
+
+Quit() method closes down all the windows that the program has opened.
+
+Q19. In which format does the source view show your script in Selenium IDE?
+Ans. XML
+
+Q20. What is Object Repository? How can we create an Object Repository in Selenium?
+Ans. Object Repository is a term used to refer to the collection of web elements belonging to Application Under Test (AUT) along with their locator values.
+
+In Selenium, objects can be stored in an excel sheet that can be populated inside the script whenever required.
+
+Q21. Explain how to navigate to a new window from the current window?
+Ans. To navigate to a new window from the current window, you can use:
+
+driver.navigate().to(new window url) method
+
+Q22. How can you convert any Selenium IDE tests from Selenese to another language?
+Ans. The format option of Selenium IDE to convert tests into another programming language
+
+Q23. To generate pdf reports, what Java API is required?
+Ans. API IText
+
+Must Check: API Online Course and Certificates
+
+Q24. What are the ways you can customize the TestNG report?’
+Ans. You can customize TestNG report in two ways:
+
+Using ITestListener Interface
+Using IReporter Interface
+Q25. In Selenium, what are Breakpoints and Startpoints?
+Ans. A breakpoint is implemented to stop execution to check if the code is working as expected till now.
+
+A startpoint indicates the point from where the execution should begin.
+
+Q26. What are the components of the Selenium suite?
+Ans. Selenium suite has four major components:
+
+Selenium IDE (Integrated Development Environment)
+It is an important tool in the Selenium Suite. It is a complete integrated development environment (IDE) for Selenium tests. It is implemented as a Firefox/Chrome plug-in and speeds up the creation of automation scripts. Selenium IDE allows for recording, editing, and debugging of functional tests. To create an advanced framework, Selenium IDE has to be combined with Selenium WebDriver or Selenium Remote Control (RC).
+
+Selenium Remote Control (RC)
+It is a server that allows users to write test scripts in multiple programming languages and browsers which results in better integration of Selenium in existing unit test frameworks. It accepts the commands from the test script and sends them to the browser as Selenium core JavaScript commands. The browser then behaves accordingly.
+
+Selenium WebDriver
+It is a tool that helps create and run test cases. It supports various platforms like Windows, Mac, and Linux and several browsers like Chrome, IE, Safari, and Firefox. The WebDriver can be written on languages like Java, Python, C#, Ruby. It overcomes the disadvantages of Selenium RC as it does not require an additional server and communicates natively with the browser and runs on it.
+
+Grid
+Selenium Grid is a server that allows tests to use web browser instances running on remote machines. Grid is exceptionally flexible and is integrated with other suite components for simultaneous execution or parallel execution. It works with Selenium RC to run test cases concurrently in multiple machines, browsers, and platforms.
+
+Selenium SUite
+Q27. Can you tell from where the term Selenium derived?
+Ans. Well, it came from a joke made by Jason Huggins (the developer of Selenium) in an email, where he mocked one of his competitors named Mercury, saying that you can cure mercury poisoning by taking selenium supplements. This is from where the other email recipients took the name and the rest is history.
+
+Learn about software testing, read our blog – what is Software Testing?
+
+Q28. Why should you use Selenium as a test tool?
+Ans. Selenium is a free and open-source tool and has a large user base. It helps communities and is compatible with every browser (Chrome, Firefox, Internet Explorer, etc.). Besides, it also has great platform compatibility (Windows, Mac OS, Linux, etc.)
+
+Q29. What is Selenese?
+Ans. Selenese is a set of selenium commands which are used for testing a web application. It is the language used for writing test scripts in Selenium IDE. Using Selenese, a tester can test the broken links, Ajax functionality, Alerts, window, list options, etc. 
+
+There are three types of commands used in Selenese – 
+
+Actions:
+These are the commands that interact directly with web applications. They change the state of the application, such as click on some link, select a value from the drop-down, etc. For example: Click and DoubleClick. 
+
+Accessors:
+These commands check the state of the application and store the application state in a user-defined variable. For example: storeTitle and storeTextPresent. 
+
+Assertions:
+These commands check the state of application against the expected conditions. They add a checkpoint or verification in the automation tests. There are three modes in assertions, namely verify, assert and waitfor. For example: assertText, assertTitle, verifyText, and verifyTitle. 
+
+Selenese Commands
+Q30. What is the difference between automation testing and manual testing?
+Ans. The difference between automation testing and manual testing is:
+
+Automation testing
+Manual testing
+Automated testing is faster and reliable than manual testing.	Manual testing takes a lot of time and human effort.
+It is a more accurate method, as it uses tools and scripts. 	It is not that accurate because of human errors.
+It does not allow random testing.	Exploratory testing can be done in manual testing.
+It is not cost-effective for low volume regression	It is not cost-effective for high-volume regression.
+Programming knowledge is required in automation testing.	Programming knowledge is not required in manual testing.
+Q31. How do we launch a batch file in a Selenium Webdriver project?
+Ans. It uses a test suite to execute a batch file and also takes an executable file to set up the process before the automation. Below code can be used to initiate the process:
+
+Process batch = Runtime.getRuntime.exec(“path of the batch file”);
+
+batch.waitFor();
+
+Q32. Elaborate on the functioning of Selenium Grid?
+Ans. Selenium Grid sends tests to the hub, which are then redirected to Selenium Webdriver. It then launches the browser and runs the test. The tests run in parallel with the entire test suite.
+
+Q33. Can we use the Selenium grid for performance testing?
+Ans. Yes, but it is not as effective as Loadrunner, which is a dedicated Performance Testing tool.
+
+Q34. Is it possible to replace automation testing with manual testing?
+Ans. Automation testing cannot fully replace manual testing as it is not possible to expect test automation to bring off all the work done by manual testing.
+
+Q35. How will you find an element using Selenium?
+Ans. Every object or control in a web page is an element in Selenium, and some of the ways to find that element in a web page include user ID, Name, Tag, Attribute, CSS, Linktext, PartialLink Text, and Xpath.
+
+Q36. What is the Page Object Model (POM)?
+Ans. POM is a design pattern responsible for creating an Object Repository for web UI elements.
+
+Q37. What is Page Factory?
+Ans. Page Factory provides an optimized way to implement Page Object Model and it has a very good memory utilization and implementation is object-oriented.
+
+Q38. What is an XPath?
+Ans. XPath is a language that helps to locate and process items in Extensible Markup Language (XML) documents. It addresses syntax based on a path through the document’s logical structure or hierarchy. XPath is used to locate a web element based on its XML path. It also stores, organizes, and transports arbitrary data.
+
+Q39. Name different types of XPath?
+Ans. There are two types of XPath:
+
+Absolute XPath
+Syntax: html/body/div[1]/section/div[1]/div/div/div/div[1]/div/div/div/div/div[3]/div[1]/div/h4[1]/b
+
+Relative Xpath
+Syntax: 
+
+//*[@class=’featured-box’]//*[text()=’Testing’]
+
+Q40. How do we run the selenium IDE test suite from the command line?
+Ans. We can use the below command to run the test suite:
+
+Syntax: 
+
+Java -jar “C:\Selenium Webdriver Questions\selenium-server-standalone-2.33.0.jar” -htmlSuite “*firefox” “http://www.google.com” ” “C:\Selenium Webdriver Questions\SeleniumSuite.HTML”
+
+Q41. How can we perform drag and drop action in Selenium WebDriver?
+Ans. We can use the advanced user interaction API to perform drag and drop operations:
+
+Example:
+
+Actions act = new Actions(driver);
+
+act.dragAndDrop(source_locator, target_locator).build().perform();
+
+Q42. Name the Selenese command that is used to present the value of a variable?
+Ans. echo() is the command used for presenting the variable value.
+
+Check out the Top JavaScript Interview Questions and Answers
+
+Q43. Can Selenium handle windows based pop up?
+Ans. Since it is an automation testing tool and supports only web application testing, it can’t handle windows pop up. However, third-party tools like AutoITm and Robot class are available to handle this.
+
+Must Check: Python Interview Questions and Answer
+
+Q44. How do we handle web-based pop up in Selenium?
+Ans. We can use WebDriver, which provides an efficient way to handle these pop-ups using the Alert interface. Besides, there are four methods too that we can use –
+
+void dismiss() – The accept() method clicks on the “Cancel” button when the pop-up window appears.
+
+void accept() – The accept() method clicks on the “Ok” button when the pop-up window appears.
+
+String getText() – The getText() method returns the text displayed on the alert box.
+
+void sendKeys(String stringToSend) – The sendKeys() method enters the specified string pattern into the alert box.
+
+Syntax:
+ 
+
+// accepting javascript alert
+
+Alert alert = driver.switchTo().alert();
+
+alert.accept();
+
+Q45. Tell me how can I take a screenshot in Selenium WebDriver?
+Ans. You can do that by using the TakeScreenshot function and by using getScreenshotAs() method, you can save the screenshot.
+
+Q46. Is it possible to enter a text without using sendKeys()?
+Ans. Yes, we can enter/ send a text using JavaScriptExecutor, and we don’t need to use sendKeys() method.
+
+Q47. What is Junit? What are Junit annotations?
+Ans. It is a Java-based unit testing framework introduced by Apache. It is an open-source Framework that offers integrations with IDEs such as Eclipse, IntelliJ, etc., allowing you to execute unit testing easily. 
+
+JUnit Annotations help identify the type of methods we have defined in our test code. Following are some of the common JUnit Annotations:
+
+@BeforeClass: It lets the system know that this method shall be invoked only once before any of the test methods.
+@Before: It denotes that the method shall be executed every time before each of the test methods.
+@Test: It denotes that the method annotated as @Test is a test method. It does not take any attributes. There can be multiple test methods in a single test script.
+@After: It denotes that the method shall be executed every time after each of the test methods.
+@AfterClass: It tells the system that this method shall be executed once after any of the test methods.
+@Ignore: It denotes that this method shall not be executed.
+Some of the JUnit Annotations for specific purposes are @ParameterizedTest,  @RunWith, @RepeatedTest, and @Parameters. 
+
+Also Read: Top Java Interview Questions and Answers
+
+Q48. What is Object Repository?
+Ans. Object Repository refers to a collection of web elements belonging to Application Under Test (AUT) along with their locator values. Object Repository is used to store locators in a centralized location.
+
+Q49. How can we create an Object Repository in Selenium?
+Ans. We can create Object Repository in an excel sheet that can be populated inside the script whenever required.
+
+Q50. Does Selenium have any limitations?
+Ans. Yes, it has.
+
+It supports testing of only web-based applications
+One cannot test mobile applications
+Selenium can’t test Captcha and Barcode readers
+It helps to generate reports using third-party tools like TestNG or JUnit
+No ready vendor support
+User must possess programming language knowledge
+Q51. Which browsers/drivers do Selenium WebDriver support?
+Ans. Selenium WebDriver supports –
+
+Android – Selendroid/Appium
+Firefox – FireFoxDriver
+Google Chrome – ChromeDriver
+HtmlUnit (Headless browser) – HtmlUnitDriver
+Internet Explorer – InternetExplorerDriver
+IOS – ios-driver/Appium
+Safari – SafariDriver
+Q52. Does Selenium Webdriver support web services testing?
+Ans. Selenium WebDriver automates web applications using the browser’s native method. Therefore, it is not possible to test web services using Selenium WebDriver because they are headless.
+
+Q53. What is an absolute XPath?
+Ans. Absolute XPath locates an element using XML expression that starts from the root node or with ‘/’. It contains the complete path of all the elements, including the root element, as well as the desired element. Absolute XPath has a significant disadvantage, which is if there is even a minor change in the UI, the entire XPath fails.
+
+Q54. What is a Relative XPath?
+Ans. Relative XPath locates an element using XML expression, beginning from anywhere in the HTML document. This is used to create robust XPaths, which remain unaffected by changes in other UI elements.
+
+Q55. How do we identify a child element using XPath?
+Ans. To identify a child element using XPath, we can use the below code:
+
+Syntax: //div/a
+
+Q56. How to use CSS Selector for identifying web elements by class?
+Ans. To identify web elements by their class, we can use .className and select elements belonging to that particular class. Apart from this, a CSS selector can locate web elements with ID, class, or name.
+
+Q57. How to use CSS Selector for identifying web elements by ID?
+Ans. To identify web elements by ID, we can use #idValue and select elements belonging to that particular ID.
+
+Q58. How to use CSS Selector for identifying web elements by their attribute value?
+Ans. To identify web elements by their attribute value, we can use [attribute=value] to select elements belonging to that particular attribute type.
+
+Q59. How can we move to nth child element using the CSS Selector?
+Ans. We can use:nth-child(n) to move to the nth child element.
+
+Must Check: CSS Online Course and Certification
+
+Must Check: CSS Interview Question and Answer
+
+Q60. Explain the difference between XPath and CSS Selector.
+Ans. In XPath, we can traverse both forward and backward, while CSS selector moves forward only.
+
+Q61. What type of tests have you automated?
+Ans. Your reply should be specific here. You should focus on how you automate test cases to do Regression testing, Smoke testing, and Sanity testing. You can also mention that you have done End to End testing, basis project, and test time estimation.
+
+Q62. Can we launch different browsers in Selenium WebDriver? How?
+Ans. Yes, we can launch different browsers in Selenium WebDriver by creating an instance of the driver of the particular browser.
+
+Q63. How to check a checkBox in selenium?
+Ans. One can select a checkBox the way a button is clicked.
+
+driver.findElement(By.id(“idOfTheElement”)).click();
+
+Toggling a checkbox on/off can also be done using the click() method, and isSelected() method is used to check if the Checkbox is toggled on or off.
+
+Q64. Explain the difference between driver.getWindowHandle() and driver.getWindowHandles() in selenium.
+Ans. driver.getWindowHandle() is a unique identifier and it returns a handle of the current page
+
+driver.getWindowHandles() returns a set of handles of all the available pages
+
+Q65. What are some possibilities of using conditions in Explicit waits?
+Ans. The most common possibilities are –
+
+elementToBeClickable(WebElement element or By locator)
+
+stalenessOf(WebElement element)
+
+visibilityOf(WebElement element)
+
+visibilityOfElementLocated(By locator)
+
+invisibilityOfElementLocated(By locator)
+
+attributeContains(WebElement element, String attribute, String value)
+
+alertIsPresent()
+
+titleContains(String title)
+
+titleIs(String title)
+
+textToBePresentInElementLocated(By, String)
+
+Q66. What are DesiredCapabilities in Selenium WebDriver?
+Ans. DesiredCapabilities are a set of key-value pairs that help to set properties for the WebDriver. This helps to set the specific properties of browsers such as browser name, platform, and version of the browser, in the browser instances.
+
+Q67. What is a data-driven framework?
+Ans. Data-driven is a test automation framework. It stores test data in a spread spreadsheet or table format such as MS Excel Sheets, MS Access Tables, SQL Database, XML files, etc. separated from test logic written in test script files. Data-Driven Testing enables engineers to execute tests for each set of test data values.
+
+Q68. What is a keyword-driven framework?
+Ans. A keyword-driven framework is a type of Functional Automation Testing Framework, and it works on action word-based testing. The keyword-driven framework helps to accelerate automated testing by using keywords related to the application being tested. These keywords should be included in every input to describe actions to be performed for each step and execute the test successfully.
+
+Q69. What is a hybrid framework?
+Ans. As the name suggests, a hybrid framework is a combination of one or more frameworks and is a combination of data-driven and keyword-driven frameworks. Here the test data and test actions are kept in external files. This implements the Page Object Model Technique, Data-Driven Technique, Modular Driven Technique, Log4j Logging, TestNG Reporting, and TestNG Reporter Logs.
+
+Q70. What is Selenium 2.0, and how is it better than Selenium 1.0?
+Ans. Selenium 1 is known as Selenium Remote Control (RC). Selenium 2.0 is a combination of Selenium 1 and WebDriver, making it superior to RC. Selenium 2 is also popularly known as Selenium WebDriver that directly sends commands to the browser instead of sending it to a server. Selenium 2.0 runs the JavaScript natively; thus there is a need to write the test once, and Selenium will test on different browsers.
+
+To learn more about Selenium, read our blog – what is Selenium?
+
+Q71. What is Selenium 3.0, and how is it better than Selenium 2.0?
+Ans. There was a major WebDriver upgrade in 2016 and Selenium 3.0 incorporates that upgrade, which includes the W3C specifications for Webdriver APIs.
+
+Also Read: Top Software Testing Interview Questions and Answers
+
+Q72. How can we pass parameters to the test script using TestNG?
+Ans. We can use Parameter annotation and Parameter tag in TestNG.xml to pass parameters to the test script.
+
+New TestNG.xml –
+ 
+
+<suite name=”newTestSuite”>
+
+<test name=”newTest”>
+
+<parameter name=”newParamName” value=”newParamValue”/>
+
+<classes>
+
+<class name=”TestFile” />
+
+</classes>
+
+</test>
+
+</suite>
+
+Q73. Can you explain how we can make two test methods dependent on each other using TestNG?
+Ans. There is a feature in TestNG, dependency, which allows a test method to depend on other test methods. Dependency is configured by using the dependent test method separated by commas to the attribute dependsOnMethods. This is done while using test annotation on multiple test methods.
+
+@Test(dependsOnMethods = { “preTests” })
+Q74. What is the difference between “type” and “typeAndWait” commands in terms of Selenium?
+Ans.“Type” command is used for entering keyboard key values into the text box of a software web application. It is also used for choosing values from a combo box. On the other hand, “typeAndWait” is used once you finish typing and when the software web page begins to reload. This command waits for the software program page to reload before proceeding. You will have to use the basic “type” command in case there is no page reload event while typing.
+
+Q75. What are the different OS/platforms supported by Selenium?
+Ans. Different OS/platforms supported by Selenium include –
+
+Android
+IOS
+Linux
+Mac OS X
+Windows Desktop
+Windows Mobile
+Q76. What types of cases can be automated using Selenium?
+Ans. Selenium can be used to automate the following types of cases –
+
+Acceptance tests
+Cross-browser tests
+End-to-end test cases
+Functional cases
+Integration tests
+Regression test cases
+Responsiveness cases
+Sanity test
+Smoke testing
+Q77. Mention the list of different types of locators?
+Ans. Different types of locators are:
+
+By.name()
+By.tagName()
+By.className()
+By.id()
+By.linkText()
+By.xpath
+By.cssSelector()
+By.partialLinkText()
+Q78. What is the procedure to iterate through options in the test script?
+Ans. To iterate through options in the test script, you can use different test data and activate a “for” loop in the program
+
+// test data collection in an array
+ 
+
+String[ ] testdata = { “t1” , “t2” , “t3” } ;
+
+// iterate through each test data
+
+For  (string s: test data) { selenium.type ( “elementLocator”, testdata) ; }
+
+Q79. What are the element locators that can be used to locate elements on the web page in selenium IDE?
+Ans. In Selenium, there are precisely four locators that are used:
+
+Html id
+Html name
+X-path locators
+CSS locators
+Q80. In Selenium IDE, how to generate random numbers and dates for test data?
+Ans. You can generate random numbers by using Java Script in Selenium IDE
+
+type
+ 
+
+css=input#s
+
+javascript{Math.random()}
+
+And for
+
+type
+
+css=input#s
+
+javascript{new Date()}
+
+Q81. How to retrieve the message in an alert box?
+Ans. To retrieve the message in an alert box, you can use the storeAlert command that will fetch the message of the alert pop up and store it in a variable.
+
+Q82. How to get the entered text from a textbox in the Selenium webdriver?
+Ans. To get the entered text from a textbox in Selenium webdriver, we will use the getAttribute() method. We will get the value attribute of an element in the HTML document. The value will be then passed as a parameter to the method.
+
+Q83. Mention how to obtain server-side log Selenium Server?
+Ans. To obtain server-side log in Selenium Server, you can use the command:
+
+“java –jar .jar –log selenium.log”
+Q84. Mention what are the types of Listeners in TestNG?
+Ans. The types of Listeners in TestNG are:
+
+IConfigurationListener
+IExecutionListener
+IHookable
+IAnnotationTransformer
+IAnnotationTransformer2
+IInvokedMethodListener
+IInvokedMethodListener2
+IMethodInterceptor
+ISuiteListener
+ITestListener
+IConfigurable
+IReporter
+Q85. What API is required for database testing in the Selenium webdriver?
+Ans. For database testing in Selenium webdriver, you require JDBC (Java Database Connectivity) API. JDBC allows you to execute the SQL statement in the database.
+
+Q86. Explain when to use AutoIT?
+Ans. Selenium is intended to automate web-based applications on various browsers. You need AutoIT to manage window GUI and non-HTML popups in the application.
+
+Also Read: Top Manual Testing Interview Questions and Answers
+
+Q87. How to get TagName?
+Ans. To get targeted TagName, you can use below method:
+
+WebElement ele1=driver.FindElement(By.TagName(“TagName val1”);
+ 
+
+String tag=ele1.getTagname();
+
+system.out.println(tag);
+
+Q88. Explain the timeout commands in Implicitwait?
+Ans. Following are the timeout commands in Implicitwait:
+
+Days
+Hours
+Minutes
+Seconds
+Microseconds
+Nanoseconds
+Milliseconds
+Q89. Mention how to store various windows into one object?
+Ans. By using the given command, you can store various windows into one object:
+
+Set<String> multiplewindows=driver.getwindowhandles();
+Q90. Mention how to switch one frame to another frame?
+Ans. To switch one frame to another frame, you can use the following command:
+
+//Click Frames link
+ 
+
+driver.findElement(By.xpath(“xpath val1”)).click();
+
+driver.switchTo().frame(“packageFrame1”);
+
+driver.findElement(By.linkText(“Alert”)).click();
+
+driver.switchTo().defaultContent();  //Erase all switches before applying switch second time 
+
+driver.switchTo().frame(“classFrame”);
+
+//Click no frames link
+
+driver.findElement(By.xpath(“xpath val1”)).click();
+
+Q91. Explain what is Beforeclass?
+Ans. Beforeclass is an annotation in TestNG that executes before all the testcases preceded by @Test annotation.
+
+Syntax:
+ 
+
+@BeforeClass
+
+public void methodname()
+
+{
+
+System.out.println(“NaukriLearning”);
+
+}
+
+Q92. Explain what @Afterclass is?
+Ans. AfterClass annotation executes after every test case when all the tests have completed execution.
+
+@AfterClass
+ 
+
+public void methodname()
+
+{
+
+System.poy.println(“NaukriLearning”);
+
+}
+
+Q93. Explain what @Ignore is?
+Ans. Ignore annotation is used to skip method execution.
+
+@Ignore
+ 
+
+public void methodname()
+
+{
+
+System.out.println(“NaukriLearning”);
+
+}
+
+Q94. How do you prioritize test methods within a class?
+Ans. To prioritize test methods within a class, you can use:
+
+public class TestClass
+ 
+
+{
+
+@Test(priority=0)
+
+public void testmeth1()
+
+{
+
+System.out.println(“NaukriLearning”)
+
+}
+
+}
+
+Q95. Mention how to pass a parameter from the XML file?
+Ans. To Pass a parameter from the XML file, you can use: 
+
+<suite name=”Naukri” >
+ 
+
+<test name=”Learning”>
+
+<classes>
+
+<parameter name=”browser”value=”ff”></parameter>
+
+<class name=”packagename.classname”></class>
+
+</classes>
+
+</test>
+
+</suite>
+
+Q96. How to fetch data from dataprovider method?
+Ans. To fetch data from the dataprovider method, you can use:
+
+@Test(dataProvider = “dp1”)
+ 
+
+public void f(String Naukri, String Learning)
+
+{
+
+//dp1===> dp1 is a method name where we maintain original data
+
+}
+
+Q97. How to manage data under the dataprovider method?
+Ans. To manage data under the dataprovider method, you can use:
+
+@DataProvider
+ 
+
+public Object[][] dp1()
+
+{
+
+String data[][]=new String[1][1];
+
+//First Row data
+
+data[0][0]=”NaukriLearning”;
+
+data[0][1]=”123456789″;
+
+}
+
+Q98. How to classify tooltip in selenium webdriver?
+Ans. You can classify tooltip in selenium webdriver with the title tag and action class.
+
+Write an xpath for an actual element, get the attribute of the title of that web elements
+
+Syntax:
+ 
+
+String tooltip = driver.findElement(By.xpath(“//a[text()=’Projects’]”).getAttribute(“title”);
+
+Q99. Mention how to execute Cucumber Tests in groups using Cucumber Tags?
+Ans. By indicating @RunWith(Cucumber.class) and @cucumberOptions annotations
+
+code:
+
+@Runwith(Cucumber.class)
+ 
+
+@cucumberOptions(
+
+feature=”Naukri Learning”,
+
+,glue={“Naukri”,”Learning”},
+
+tags={“@smokesuite”,”@Regrssion”}
+
+)
+
+You can also do something with TestNG groups attributes of @Test annotation.
+
+Example:
+
+Class GroupTestEx1{
+ 
+
+@Test(groups = { “Naukri”, “Learning” })
+
+public void testPrintMessage() {  }
+
+@Test(groups = { “Naukri” })
+
+public void testSalutationMessage() {  }
+
+@Test(groups = { “Learning” })
+
+public void testingExitMessage() {  }
+
+}
+
+TestNG.xml:
+ 
+
+<suite name = “Suite1”>
+
+<test name = “test1”>
+
+<groups>
+
+<run>
+
+<include name = “Learning” />
+
+</run>
+
+</groups>
+
+<classes>
+
+<class name = “GroupTestExample” />
+
+</classes>
+
+</test>
+
+</suite>
+
+Q100. How to handle dynamic tables in Selenium?
+Ans. You can handle the dynamic table using Relative xpath in Selenium.
+
+Q101. Mention what the various types of framework are?
+Ans. Following are the various types of frameworks:
+
+Data-Driven Testing Framework
+Keyword Driven Testing Framework
+Hybrid Testing Framework
+Module Based Testing Framework
+Library Architecture Testing Framework
+Behavior Driven Development Framework
+Most Common Frameworks are:
+
+Hybrid Testing Framework
+Data-Driven Testing Framework
+Keyword Driven Testing Framework
+Q102. Write a code snippet to launch the Firefox browser in WebDriver.
+Ans. Below is the code snippet to launch the Firefox browser in WebDriver:
+
+public class FirefoxBrowserLaunchDemo {  
+
+public static void main(String[] args) {   
+
+//Creating a driver object referencing WebDriver interface  
+
+WebDriver driver;  
+
+//Setting webdriver.gecko.driver property  
+
+System.setProperty(“webdriver.gecko.driver”, pathToGeckoDriver + “\\geckodriver.exe”);  
+
+//Instantiating driver object and launching browser  
+
+driver = newFirefoxDriver();  
+
+//Using get() method to open a webpage  
+
+driver.get(“http:// naukri.com/learning”);  
+
+//Closing the browser  
+
+driver.quit();  
+
+    }  
+
+}  
+
+Q103. What is the difference between Silk Test and Selenium? 
+Ans. The differences between the Silk test and Selenium are: 
+
+Selenium Test Tool	Silk Test Tool
+It is a completely free testing tool. 	Silk test is not a free testing tool.
+Supports many browsers like Firefox, Interner Explorer, Safari, and Opera.	Supports only Firefox and Internet Explorer.
+Has the flexibility to use many languages like Java, Perl, and Ruby.	Uses text scripting language.
+Cab be used for only web applications.	Can be used for client-server applications.
+Q104. How can you check the visibility of web elements (if an element is displayed on the screen)?
+Ans. The visibility of web elements can be checked through the following types WebDriver commands. 
+
+isDisplayed() 
+Syntax:
+
+isDisplayed(): 
+
+boolean buttonPresence = driver.findElement(By.id(“gbqfba”)).isDisplayed();
+
+isSelected()
+Syntax:
+
+isSelected():
+
+boolean buttonSelected = driver.findElement(By.id(“gbqfba”)).isSelected();
+
+isEnabled()
+Syntax: 
+
+isEnabled(): 
+
+boolean searchIconEnabled = driver.findElement(By.id(“gbqfb”)).isEnabled();
+
+Q105. How to type text in a textbox using Selenium?
+Ans. In Selenium, SendKeys(“String to be entered”) is used to enter the string in the textbox.
+
+Syntax:
+
+WebElement username = drv.findElement(By.id(“Email”));
+
+// entering username
+
+username.sendKeys(“sth”); 

@@ -1,0 +1,424 @@
+How to get distinct characters and their count in a String?
+package com.journaldev.java.string;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class DistinctCharsCount {
+
+	public static void main(String[] args) {
+
+		printDistinctCharsWithCount("abc");
+		printDistinctCharsWithCount("abcab3");
+		printDistinctCharsWithCount("hi there, i am pankaj");
+	}
+
+	private static void printDistinctCharsWithCount(String input) {
+		Map<Character, Integer> charsWithCountMap = new HashMap<>();
+
+		// using Map merge method from Java 8
+		for (char c : input.toCharArray())
+			charsWithCountMap.merge(c, 1, Integer::sum);
+		System.out.println(charsWithCountMap);
+
+		// another way using latest Java enhancements and no for loop, a bit complex though
+		List<Character> list = input.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+
+		list.stream().forEach(c -> charsWithCountMap.merge(c, 1, Integer::sum));
+
+		System.out.println(charsWithCountMap);
+
+	}
+
+}
+Write a java program to reverse a String?
+There are many ways to reverse a String. Some of the common ones are:
+
+StringBuilder/StringBuffer reverse() method
+Using char/byte array and traverse in reverse direction and populate the result string
+However if you are not sure of input String content, always use StringBuilder built-in reverse() method. Because using char and byte array may produce unwanted results. I have provided a complete explanation for this in Reverse a String in Java.
+
+package com.journaldev.java.string;
+
+public class ReverseAString {
+
+	public static void main(String[] args) {
+
+		reverseInputString("abc");
+		reverseInputString("ç©∆˙¨˚ø"); //special chars
+	}
+
+	private static void reverseInputString(String input) {
+		StringBuilder sb = new StringBuilder(input);
+		String result = sb.reverse().toString();
+		System.out.println(result);
+	}
+
+}
+How to check if a String is Palindrome?
+A palindrome string is one whose reverse is also same string. So we can reverse the input string and check if both strings are equal for this. Or we can be smart and use the String charAt(int index) method to check for palindrome string.
+
+package com.journaldev.java.string;
+
+public class PalindromeString {
+
+	public static void main(String[] args) {
+		
+		checkPalindromeString("abc");
+		checkPalindromeString("abcba");
+		checkPalindromeString("ç∂©∂ç");
+	}
+
+	private static void checkPalindromeString(String input) {
+		boolean result = true;
+		int length = input.length();
+		for(int i=0; i < length/2; i++) {
+			if(input.charAt(i) != input.charAt(length-i-1)) {
+				result = false;
+				break;
+			}
+		}
+		System.out.println(input + " is palindrome = "+result);
+		
+	}
+
+}
+How to remove all occurrences of a given character from input String?
+There is no remove function in the String class, but we can use replaceAll() in this case. Here is the simple program showing how to do it.
+
+package com.journaldev.java.string;
+
+public class RemoveCharFromString {
+
+	public static void main(String[] args) {
+
+		removeCharFromString("abcbcdjfkd", 'c');
+		removeCharFromString("Pankaj", 'a');
+		removeCharFromString("ç∂©∂ç", '©');
+
+	}
+
+	private static void removeCharFromString(String input, char c) {
+		String result = input.replaceAll(String.valueOf(c), "");
+		System.out.println(result);
+	}
+
+}
+How to prove String is immutable programatically?
+We know that String is immutable in java, however new developers still get confused with this. Let’s try to understand the reason for this confusion.
+
+String s1 = "Java";
+
+s1 = "Python"; 
+In above code snippet, we can say that s1 value got changed and it’s a String object. So how can we say that String is immutable? The most important point to understand is how Strings get created in java. When we create a String using string literal, it doesn’t change the value of original String. It creates a new String in the string pool and change the reference of the variable. So original string value is never changed and that’s why Strings are immutable. Below program proofs our statement, read out the comments for proper understanding the concept.
+
+package com.journaldev.java.string;
+
+public class StringImmutabilityTest {
+
+	public static void main(String[] args) {
+
+		String s1 = "Java"; // "Java" String created in pool and reference assigned to s1
+		
+		String s2 = s1; //s2 is also having the same reference to "Java" in the pool
+		
+		System.out.println(s1 == s2); // proof that s1 and s2 have same reference
+		
+		s1 = "Python"; 
+		//s1 value got changed above, so how String is immutable?
+		
+		//well, in above case a new String "Python" got created in the pool
+		//s1 is now referring to the new String in the pool 
+		//BUT, the original String "Java" is still unchanged and remains in the pool
+		//s2 is still referring to the original String "Java" in the pool
+		
+		// proof that s1 and s2 have different reference
+		System.out.println(s1 == s2); 
+		
+		System.out.println(s2); 
+		// prints "Java" supporting the fact that original String value is unchanged, hence String is immutable
+		
+	}
+
+}
+Write a program to count number of words in a String?
+The simple solution to this program seems to be input.split(" ").length but this won’t work if your string is not properly formatted and it contains leading and trailing spaces, duplicate multiple spaces and tabs. Luckily String split() function takes regular expression as argument and we can use it to count the number of words in a string.
+
+package com.journaldev.java.string;
+
+public class CountNumberOfWordsInString {
+
+	public static void main(String[] args) {
+		
+		countNumberOfWords("My name is Pankaj");
+		countNumberOfWords("I Love Java Programming");
+		countNumberOfWords(" This	is  not   properly formatted		line ");
+
+	}
+
+	private static void countNumberOfWords(String line) {
+		//System.out.println(line.split(" ").length); //won't work with tabs and multiple spaces
+		
+		String trimmedLine = line.trim();
+		int count = trimmedLine.isEmpty() ? 0 : trimmedLine.split("\\s+").length;
+		
+		System.out.println(count);
+	}
+
+}
+Write a program to check if two Strings are created with same characters?
+First of all we will have to create a Set of characters from the input Strings. Then use Set equals() method to check if they contains the same characters or not. Here is a simple program to check if two strings are created with same characters.
+
+package com.journaldev.java.string;
+
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class CheckSameCharsInString {
+
+	public static void main(String[] args) {
+		sameCharsStrings("abc", "cba");
+		sameCharsStrings("aabbcc", "abc");
+		sameCharsStrings("abcd", "abc");
+		sameCharsStrings("11", "1122");
+		sameCharsStrings("1122", "11");	
+	}
+
+	private static void sameCharsStrings(String s1, String s2) {
+
+		Set<Character> set1 = s1.chars().mapToObj(c -> (char) c).collect(Collectors.toSet());
+		Set<Character> set2 = s2.chars().mapToObj(c -> (char) c).collect(Collectors.toSet());
+		System.out.println(set1.equals(set2));
+	}
+
+}
+Read two String user input and check if first contains second?
+This is a simple program and we can use String contains() method to check if specified string is part of this string. However we will have to use Scanner class to read user inputs.
+
+package com.journaldev.java.string;
+
+import java.util.Scanner;
+
+public class StringContainsSubstring {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter First String:");
+		String s1 = scanner.nextLine();
+		
+		System.out.println("Enter Second String:");
+		String s2 = scanner.nextLine();
+		
+		scanner.close();
+		
+		boolean result = stringContainsSubstring(s1, s2);
+		System.out.println(s1+" contains "+s2+" = "+result);
+	}
+
+	private static boolean stringContainsSubstring(String string, String substring) {
+		boolean result = false;
+		result = string.contains(substring);
+		return result;
+	}
+
+}
+Here is a sample output of above program:
+
+Enter First String:
+Pankaj
+Enter Second String:
+an
+Pankaj contains an = true
+How to swap two Strings without using a third variable?
+We can do it using String substring() method. Here is a simple code snippet to showcase this:
+
+String s1 = "abc";
+String s2 = "def";
+
+s1 = s1.concat(s2);
+s2 = s1.substring(0,s1.length()-s2.length());
+s1 = s1.substring(s2.length());
+What if we have to write a function to do this? Since String is immutable, the change in values of the String references in the method will be gone as soon as the method ends. Also we can’t return multiple objects from a method in java. So we will have to create a Container to hold the input strings and then perform the above logic in the method. Below code shows how this can be done, although it might look complex but the logic is same as above.
+
+package com.journaldev.java.string;
+
+import java.util.Scanner;
+
+public class SwapTwoStrings {
+
+	public static void main(String[] args) {
+		
+		Container container = new Container();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter First String:");
+		container.setFirstString(scanner.nextLine());
+		
+		System.out.println("Enter Second String:");
+		container.setSecondString(scanner.nextLine());
+		scanner.close();
+		System.out.println(container);
+		container = swapStrings(container);
+		System.out.println(container);
+	}
+
+	private static Container swapStrings(Container container) {
+		container.setFirstString(container.getFirstString().concat(container.getSecondString())); //s1 = s1+s2
+		container.setSecondString(container.getFirstString().substring(0, container.getFirstString().length()-container.getSecondString().length())); // s2=s1
+		container.setFirstString(container.getFirstString().substring(container.getSecondString().length()));
+		return container;
+	}
+
+}
+
+class Container{
+	private String firstString;
+	private String secondString;
+	
+	public String getFirstString() {
+		return firstString;
+	}
+	public void setFirstString(String firstString) {
+		this.firstString = firstString;
+	}
+	public String getSecondString() {
+		return secondString;
+	}
+	public void setSecondString(String secondString) {
+		this.secondString = secondString;
+	}
+	
+	@Override
+	public String toString() {
+		return "First String = "+firstString+", Second String = "+secondString;
+	}
+}
+Sample Output:
+
+Enter First String:
+Java
+Enter Second String:
+Python
+First String = Java, Second String = Python
+First String = Python, Second String = Java
+Write a program to find out first non repeated character from input String?
+package com.journaldev.java.string;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindNonRepeatingChar {
+
+	public static void main(String[] args) {
+
+		System.out.println(printFirstNonRepeatingChar("abcaabcdedxy"));
+		System.out.println(printFirstNonRepeatingChar("abca"));
+		System.out.println(printFirstNonRepeatingChar("aaa"));
+
+	}
+
+	private static Character printFirstNonRepeatingChar(String string) {
+		char[] chars = string.toCharArray();
+
+		List<Character> discardedChars = new ArrayList<>();
+
+		for (int i = 0; i < chars.length; i++) {
+			char c = chars[i];
+
+			if (discardedChars.contains(c))
+				continue;
+
+			for (int j = i + 1; j < chars.length; j++) {
+				if (c == chars[j]) { // match found
+					discardedChars.add(c);
+					break;
+				} else if (j == chars.length - 1) { // no match found till end
+					return c;
+				}
+			}
+		}
+		return null;
+	}
+
+}
+Provide two ways to check if a String contains only digits?
+We can use regular expression to check if a String is numeric or not. Another way is to parse it to Long and if it’s a non numeric string then it will throw NumberFormatException.
+
+package com.journaldev.java.string;
+
+public class CheckIfStringContainsDigitsOnly {
+
+	public static void main(String[] args) {
+		digitsOnlyString("111");
+		digitsOnlyString("111a 1");
+		digitsOnlyString("111 222");
+		digitsOnlyString("111L");
+
+	}
+
+	private static void digitsOnlyString(String string) {
+		if(string.matches("\\d+")) System.out.println("Digit Only String ::"+string);
+		
+		try {
+			long l = Long.parseLong(string);
+			System.out.println("Digit Only String ::"+string);
+		}catch(Exception e){
+			System.out.println("Non Digit Only String ::"+string);
+		}
+		
+	}
+
+}
+
+Write a Program to check whether a string is anagram.
+
+Anagram is a string using whuch we can form another string. To form a anagram string then bith string should have same length.
+
+Logic:
+
+Take two strings
+Convert two strings to character arrays
+Sort two strings using arrays.sort method
+Compare two strings using arrays.equals method
+
+
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Race";
+    String str2 = "Care";
+    
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+
+    // check if length is same
+    if(str1.length() == str2.length()) {
+
+      // convert strings to char array
+      char[] charArray1 = str1.toCharArray();
+      char[] charArray2 = str2.toCharArray();
+
+      // sort the char array
+      Arrays.sort(charArray1);
+      Arrays.sort(charArray2);
+
+      // if sorted char arrays are same
+      // then the string is anagram
+      boolean result = Arrays.equals(charArray1, charArray2);
+
+      if(result) {
+        System.out.println(str1 + " and " + str2 + " are anagram.");
+      }
+      else {
+        System.out.println(str1 + " and " + str2 + " are not anagram.");
+      }
+    }
+    else {
+      System.out.println(str1 + " and " + str2 + " are not anagram.");
+    }
+  }
+}
+
+https://github.com/WebJournal/journaldev/tree/master/CoreJavaProjects/String-Programs

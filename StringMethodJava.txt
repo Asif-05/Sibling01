@@ -1,0 +1,474 @@
+Introduction To String Class In Java
+A String is a class in Java and it can be seen as a collection or the sequence of characters. Strings are used as an object in Java. Java supports different methods for String Manipulation. In the next section, we will cover all the important string methods along with a brief description of each of them.
+
+Java String class is an immutable class i.e. once it is created, it can’t be modified thereafter. This is the reason why StringBuffer and StringBuilder came into the picture as they are mutable and are used to do a lot of modification to the sequence of characters even after creation.
+
+Java String Methods
+Given below are the String methods that are used extensively in Java programming language for manipulating the Strings.
+
+#1) Length
+The length is the number of characters that a given string contains. Java has a length() method that gives the number of characters in a String.
+
+Given below is the programming Example.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+        String str = "Saket Saurav";
+        System.out.println(str.length());
+    }
+}
+Output:
+
+Java String Length - Output
+
+#2) Concatenation
+Although Java uses a ‘+’ operator for concatenating two or more strings. A concat() is an inbuilt method for String concatenation in Java.
+
+Example of how we can use the concat() method in our programs is given below.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str1 = "Software";
+        String str2 = "Testing";
+        System.out.println(str1 + str2);
+        System.out.println(str1.concat(str2));
+    }
+}
+Output:
+
+Java String Concatenation - Output
+
+#3) String to CharArray()
+This method is used to convert all the characters of a string into a Character Array. This is widely used in the String manipulation programs.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Saket";
+        char[] chars = str.toCharArray();
+        System.out.println(chars);
+        for (int i= 0; i< chars.length; i++) {
+            System.out.println(chars[i]);
+        }
+    }
+ 
+}
+Output:
+
+Java String to Char Array() - Output
+
+Further reading => How to convert Char to String in Java
+
+#4) Java String toCharArray()
+The java string toCharArray() method converts this string into character array. It returns a newly created character array, its length is similar to this string and its contents are initialized with the characters of this string.
+
+Internal implementation
+public char[] toCharArray() {  
+      // Cannot use Arrays.copyOf because of class initialization order issues  
+      char result[] = new char[value.length];  
+      System.arraycopy(value, 0, result, 0, value.length);  
+      return result;  
+  }   
+
+#5) String charAt()
+This method is used to retrieve a single character from a given String.
+
+The syntax is given as:
+
+char charAt(int i);
+The value of ‘i’ should not be negative and it should specify the location of a given String i.e. if a String length is 5, then the value of ‘i’ should be less than 5.
+
+Given below is the program that will demonstrate how the charAt() method retrieves a particular character from the given String.
+
+In this program, we have taken a String called “java string API” and we will try to retrieve the characters present at different indexes.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "java string API";
+        System.out.println(str.charAt(0));
+        System.out.println(str.charAt(1));
+        System.out.println(str.charAt(2));
+        System.out.println(str.charAt(3));
+        System.out.println(str.charAt(6));
+    }
+ 
+}
+Output:
+
+JavaStringcharAt()
+
+Now in the same program, if we try
+
+System.out.println(str.charAt(50));
+
+Or
+
+System.out.println(str.charAt(-1));
+
+Then it will throw “java.lang.StringIndexOutOfBoundsException:”.
+
+#6) Java String compareTo()
+This method is used to compare two Strings. The comparison is based on alphabetical order. In general terms, a String is less than the other if it comes before the other in the dictionary.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str1 = "Zeus";
+        String str2 = "Chinese";
+        String str3 = "American";
+        String str4 = "Indian";
+         
+        System.out.println(str1.compareTo(str2));
+          //C comes 23 positions before Z, so it will give you 23
+        System.out.println(str3.compareTo(str4));
+          // I comes 8 positions after A, so it will give you -8
+    }
+}
+Output:
+
+Java String compareTo
+
+#7) String contains()
+This method is used to determine whether a substring is a part of the main String or not. The return type is Boolean.
+
+For E.g. In the below program, we will check whether “testing” is a part of “Softwaretestinghelp” or not and we will also check whether “blog” is a part of “Softwaretestinghelp”.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Softwaretestinghelp";
+        String str1 = "testing";
+        String str2 = "blog";
+        System.out.println("testing is a part of Softwaretestinghelp: " + str.contains(str1));
+        System.out.println("blog is a part of Softwaretestinghelp: " + str.contains(str2));
+    }
+ 
+}
+Output:
+
+JavaStringcontains()
+
+#8) Java String split()
+As the name suggests, a split() method is used to split or separate the given String into multiple substrings separated by the delimiters (“”, “ ”, \\, etc). In the below example, we will split the String (Thexyzwebsitexyzisxyzsoftwaretestingxyzhelp) using a chunk of String(xyz) already present in the main String.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Thexyzwebsitexyzisxyzsoftwaretestingxyzhelp";
+        String[] split = str.split("xyz");
+         
+        for (String obj: split) {
+            System.out.println(obj);
+        }
+         
+         
+    }
+ 
+}
+Output:
+
+Java String split()
+
+#9) Java String indexOf()
+This method is used to perform a search operation for a specific character or a substring on the main String. There is one more method known as lastIndexOf() which is also commonly used.
+
+indexOf() is used to search for the first occurrence of the character.
+lastIndexOf() is used to search for the last occurrence of the character.
+
+Given below is a programming example of how to use both indexOf() and lastIndexOf() methods.
+
+package codes;
+import java.lang.String;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Saket Saurav " + "performing a search";
+        System.out.println(str);
+        System.out.println("index of 'p' is " + str.indexOf('p'));
+        System.out.println("index of 'u' is " + str.indexOf('u'));
+        System.out.println("last index of 'S' is " + str.lastIndexOf('S'));
+        System.out.println("last index of 's' is " + str.lastIndexOf('s'));
+    }
+ 
+}
+Output:
+
+Java String indexOf() - Output
+
+#10) Java String toString()
+This method returns the String equivalent of the object that invokes it. This method does not have any parameters. Given below is the program where we will try to get the String representation of the object.
+
+package codes;
+import java.lang.String;
+import java.lang.*;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        Integer obj = new Integer(10);
+        String str = obj.toString();
+        String str2 = obj.toString(80);
+        String str3 = obj.toString(9823, 2); 
+//The above line will represent the String in base 2
+        System.out.println("The String representation is " + str);
+        System.out.println("The String representation is " + str2);
+        System.out.println("The String representation is " + str3);
+    }
+}
+Output:
+
+
+Java String toString()
+
+#11) String reverse()
+The StringBuffer reverse() method is used to reverse the input characters of the String.
+
+package codes;
+import java.lang.*;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "plehgnitseterawtfos";
+        StringBuffer sb = new StringBuffer(str);
+        sb.reverse();
+        System.out.println(sb);
+    }
+}
+Output:
+
+Java String reverse()
+
+#12) String replace()
+The replace() method is used to replace the character with the new characters in a String.
+
+package codes;
+import java.lang.*;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Shot";
+        String replace = str.replace('o', 'u');
+        System.out.println(str);
+        System.out.println(replace);
+    }
+ 
+}
+Output:
+
+Java String replace()
+
+#13) Substring Method()
+The Substring() method is used to return the substring of the main String by specifying the starting index and the last index of the substring.
+
+For Example, in the given String “Softwaretestinghelp”, we will try to fetch the substring by specifying the starting index and the last index.
+
+package codes;
+import java.lang.*;
+ 
+public class StringMethods {
+ 
+    public static void main(String[] args) {
+         
+        String str = "Softwaretestinghelp";
+        System.out.println(str.substring(8,12));
+//It will start from 8th character and extract the substring till 12th character
+        System.out.println(str.substring(15,19));
+    }
+}
+Output:
+
+Java Substring Method()
+
+Frequently Asked Questions
+Q #1) What is String in Java?
+
+Answer: A String is a class in Java and it can be seen as a collection or the sequence of characters. Strings are used as an object in Java.
+
+Q #2) How to get a list of Strings in Java?
+
+Answer: Below is the program on how to get a list of Strings in Java. In this program, we have initialized an ArrayList with the values and used a split String variable as a delimiter between the Strings.
+
+Finally, we have used the join() method to join the List values separated by the delimiter.
+
+Note: As the delimiter is empty here, the Strings will be populated without any delimiter between them.
+
+Package codes;
+import java.util.Arrays;
+import java.util.List;
+class String {
+ 
+    public static void main(String[] args) {
+ 
+        List<String> list = Arrays.asList("Saket", "Saurav", "QA");
+        String split = "";
+ 
+        String str = String.join(split, list);
+        System.out.println(str);
+    }
+}
+Output:
+
+list of Strings in Java
+
+Q #3) How to change String values in Java?
+
+Answer: As we know, Strings are an immutable class, so you can’t change the value. You can either use StringBuilder or StringBuffer which are mutable classes. They have got the functionality to change the String value.
+
+Q #4) How to remove part of a String in Java?
+
+Answer: Below is the program to remove a part of a String in Java using the replace() method.
+
+public class StringProgs {
+ 
+    public static void main(String[] args) {
+ 
+        String str = "Saket Saurav";
+        String str2 = str.replace("Saurav","");
+        System.out.println(str);
+        System.out.println(str2);
+         
+    }
+ 
+}
+Output:
+
+Part of a String in Java
+
+Q #5) How do you declare a String in Java?
+
+Answer: The string can be declared as
+
+String variableName;
+
+However, String will be initialized as
+
+String variableName = “value of the String variable”;
+
+Q #6) What is Java String API?
+
+Answer: Java String is a class. API stands for Application Programming Interface. However, there is a general norm that the overall implementation of String class and all its methods are called as Java String API.
+
+In the context of Java, the Application Programming Interface is a collection of packages, classes, and methods which is why the term “Java String API” was coined.
+
+
+Q #7) How to increase String size in Java?
+
+Answer: You can use StringBuilder for increasing the size of a String in Java. StringBuilder has an inbuilt method called setLength() using which you can set the length of a String which is already initialized.
+
+Below is the programming example.
+
+Here we have taken a String of a size 5. Then we have changed the size to 10 using the setLength() method.
+
+public class StringProgs {
+ 
+    public static void main(String[] args) {
+        StringBuilder std = new StringBuilder("saket");
+          System.out.println(std);  
+          System.out.println("length of std is  " + std.length());
+          std.setLength(10);
+          System.out.println("Increased the length to 10, string = " + std);
+          System.out.println("length = " + std.length());
+         
+    }
+ 
+}
+Output:
+
+increase String size in Java
+
+Q #8) How to find all the occurrences of String in a String Java?
+
+Answer: Here is an example of how to find all the occurrences of a particular String out of the main String.
+
+In this example, we have taken an input String as “StringJavaAndJavaStringMethodsJava”. Then we have initialized a subString as “Java” with a counter variable and the index as 0. Then we have used the indexOf() method with the help of a while loop to check each index and incrementing it after every iteration.
+
+public class StringProgs {
+ 
+    public static void main(String[] args) {
+        String str = "StringJavaAndJavaStringMethodsJava";
+        String strToFind = "Java";
+        int count = 0, Index = 0;
+         
+        while ((Index = str.indexOf(strToFind, Index)) != -1 ){
+  
+            System.out.println("Java found at index: " + Index);
+            count++;
+            Index++;
+             
+        }
+         
+        System.out.println("So the total occurrences are: " + count);
+         
+    }
+ 
+}
+Output:
+
+find all occurrences of String
+
+Q #9) How to get String from String in Java?
+
+Answer: In the following example, we have taken a large String out of which we are printing each String in a new line. In general terms, this question can be restated as “How to get words from a larger word”.
+
+Here, we have initialized a String and then used split() method and depending on the number of possible words or Strings, we have set the argument as 7.
+
+After that, we have used a simple for each loop and printed each word.
+
+public class StringProgs {
+ 
+    public static void main(String[] args) {
+        String str = "Hey there I am misusing WhatsApp";
+        String [] split = str.split(" ", 7);
+  
+        for (String obj : split)
+            System.out.println(obj);
+         
+    }
+ 
+}
+Output:
+
+get String from String in Java
+
+Q #10) How to get the first index of String in Java?
+
+Answer: You can use charAt() method to get the first index of String in Java. For Example, You can initialize any String with certain value and then use a String class Java method as
+
+StringVariableName.charAt(0);
